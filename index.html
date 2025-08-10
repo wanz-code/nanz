@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ELAINA STORE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-row">
+        <div class="brand-wrap">
+          <img class="logo" src="https://files.catbox.moe/hskkoq.jpg" alt="Logo ELAINA STORE">
+          <div class="brand-text">
+            <h1 class="brand">ELAINA STORE</h1>
+            <p class="tag">WELCOME TO ELAINA STORE</p>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-btn" data-nav="products">Produk</button>
+          <button class="nav-btn" data-nav="plans">Pterodactyl</button>
+          <button class="nav-btn" data-nav="about">Tentang</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container main">
+      <!-- hero -->
+      <section class="hero card">
+        <div class="hero-left">
+          <h2>Selamat datang di <span class="accent">ELAINA STORE</span></h2>
+          <p class="lead">Penyedia layanan social media boost & server panel. Pilih kategori, lihat paket, lalu klik <strong>Detail</strong> → <strong>Beli</strong>.</p>
+          <div class="cta-row">
+            <a href="#products" class="btn btn-primary">Lihat Produk</a>
+            <a href="#plans" class="btn btn-ghost">Paket Pterodactyl</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="https://files.catbox.moe/hskkoq.jpg" alt="Logo big" class="hero-img">
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="products" class="section">
+        <h3 class="section-title">Produk & Layanan</h3>
+        <div id="categories" class="chips"></div>
+        <div id="product-grid" class="grid" aria-live="polite"></div>
+      </section>
+
+      <!-- Pterodactyl plans -->
+      <section id="plans" class="section">
+        <h3 class="section-title">Pterodactyl Panel Plans</h3>
+        <div id="plans-grid" class="plans-grid"></div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section card hidden">
+        <h3 class="section-title">Tentang ELAINA STORE</h3>
+        <p>Kami melayani paket social media growing (TikTok Luar Negeri & Indonesia, Instagram, YouTube, WhatsApp channel) dan penyewaan server Pterodactyl. Semua pesanan diproses via WhatsApp. Untuk integrasi otomatis/provisioning, diperlukan API & serverless functions.</p>
+      </section>
+    </main>
+
+    <!-- Floating quick-buy (mobile) -->
+    <button id="quickBuy" class="quick-buy" aria-label="Beli cepat">Beli Cepat</button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-panel" role="document">
+        <button id="modal-close" class="modal-close" aria-label="Tutup">×</button>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Toast (small non-blocking feedback) -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <small>© <span id="year"></span> ELAINA STORE</small>
+          <div class="contact">WA: <a id="waLink" href="https://wa.me/6282211895453" target="_blank" rel="noopener">0822-1189-5453</a></div>
+        </div>
+        <div class="social">
+          <a href="https://tiktok.com/@nando_store_web" target="_blank" rel="noopener" class="social-link">TikTok</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
